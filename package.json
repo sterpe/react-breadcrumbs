@@ -22,7 +22,14 @@
     "url": "https://github.com/svenanders/react-breadcrumbs/issues"
   },
   "homepage": "https://github.com/svenanders/react-breadcrumbs",
-  "dependencies": {
+  "browserify": {
+    "transform": ["browserify-shim"]
+  },
+  "browserify-shim": {
+    "react": "global:React",
+    "react/addons": "global:React"
+  },
+  "devDependencies": {
     "react": "^0.12.2",
     "react-router": "^0.11.6"
   }
