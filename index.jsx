@@ -1,8 +1,8 @@
 /** @jsx React.DOM */
 "use strict";
 
-var React = React || require('react');
-var ReactRouter = ReactRouter || require('react-router');
+var React = require('react');
+var ReactRouter = require('react-router');
 
 var Router = ReactRouter;
 var Route = ReactRouter.Route;

@@ -1,8 +1,8 @@
 /** @jsx React.DOM */
 "use strict";
 
-var React = React || require('react');
-var ReactRouter = ReactRouter || require('react-router');
+var React = require('react');
+var ReactRouter = require('react-router');
 
 var Router = ReactRouter;
 var Route = ReactRouter.Route;
@@ -15,7 +15,7 @@ var Breadcrumbs = React.createClass({
     render: function () {
         var separator = " > ";
         if("undefined" != typeof this.props.separator){
-            separator=this.props.separator;
+          separator=this.props.separator;
         }
         var displayMissing = true;
         if("undefined" != typeof this.props.displayMissing){
@@ -28,8 +28,8 @@ var Breadcrumbs = React.createClass({
         if('object' == typeof routes){
             var arr = Object.keys(routes).map(function (key) {return routes[key]});
             routes=arr;
-        }
-
+        } 
+        
         routes.forEach(function (route, i, arr) {
             var name, link, missingParams = false;
             if ("undefined" == typeof route.name) {
@@ -48,7 +48,7 @@ var Breadcrumbs = React.createClass({
             }
             if (missingParams === true && displayMissing) {
                 breadcrumbs.push(
-                    React.createElement("span", {key: "missing" + i},
+                    React.createElement("span", {key: "missing" + i}, 
                         name, " ", separator
                     )
                 );
@@ -61,8 +61,8 @@ var Breadcrumbs = React.createClass({
                 }
 
                 breadcrumbs.push(
-                    React.createElement("span", {key: route.name + '' + breadcrumbs.length},
-                        link, " ", separator
+                    React.createElement("span", {key: route.name + '' + breadcrumbs.length}, 
+          link, " ", separator
                     )
                 );
             }

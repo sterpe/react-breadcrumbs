@@ -23,7 +23,9 @@
   },
   "homepage": "https://github.com/svenanders/react-breadcrumbs",
   "browserify": {
-    "transform": ["browserify-shim"]
+    "transform": [
+      "browserify-shim"
+    ]
   },
   "browserify-shim": {
     "react": "global:React",
@@ -31,6 +33,7 @@
   },
   "devDependencies": {
     "react": "^0.12.2",
-    "react-router": "^0.11.6"
+    "react-router": "^0.11.6",
+    "react-tools": "^0.12.2"
   }
 }
